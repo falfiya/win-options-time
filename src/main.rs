@@ -31,11 +31,11 @@ fn main() {
       Err(e) => die("Could not set the time format", &e),
    }
 
-   println!(
-"Finished.
+   println!("
+Finished.
 You can close this console window.
 Be patient and wait for the time to change.
-It'll take a minute for it to update on the taskbar."
-   );
+It'll take a minute for it to update on the taskbar.
+   ");
    pause::pause();
 }

@@ -1,10 +1,15 @@
 use std::io;
 use io::prelude::*;
 
+extern crate getch;
+use getch::Getch;
+
 pub fn pause() {
-   let mut stdin = io::stdin();
    let mut stdout = io::stdout();
-   write!(stdout, "Press any key to continue...").unwrap();
-   stdout.flush().unwrap();
-   let _ = stdin.read(&mut [0u8]).unwrap();
+   match write!(stdout, "Press any key to continue...").or(stdout.flush()) {
+      Err(_) => std::process::exit(5),
+      _ => (),
+   }
+
+   Getch::new().getch().expect("win-options-time::pause internal error: could not getch.");
 }

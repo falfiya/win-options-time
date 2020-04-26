@@ -4,4 +4,4 @@ build:
 clean:
 	cmd /C rd /s /q target
 
-.PHONY: make-was-easier-to-type clean
+.PHONY: build clean
