@@ -1,0 +1,11 @@
+[package]
+name = "win-options-time"
+version = "0.0.1"
+authors = ["Coalpha"]
+edition = "2018"
+
+[dependencies]
+winreg = "0.7"
+
+[build-dependencies]
+embed-resource = "1.3.3"
