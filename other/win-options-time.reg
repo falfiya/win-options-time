@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\International]
+s1159="c"
+s2359="p"
+sShortTime="$SPY hmmtt"

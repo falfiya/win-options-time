@@ -12,6 +12,8 @@ It also shows up on anything that uses the builtin win32 APIs to format time.
 
 It's kinda rough when some of these plays are less stupid than the ones I make.
 
+I haven't made an uninstaller yet because I'm lazy.
+
 ### Rant
 
 I don't really have a good reason for making this other than "iT wAs A gOoD
