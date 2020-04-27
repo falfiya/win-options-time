@@ -63,7 +63,7 @@ dependencies = [
 
 [[package]]
 name = "win-options-time"
-version = "0.0.1"
+version = "1.0.0"
 dependencies = [
  "embed-resource",
  "getch",

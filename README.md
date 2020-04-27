@@ -12,6 +12,12 @@ It also shows up on anything that uses the builtin win32 APIs to format time.
 
 It's kinda rough when some of these plays are less stupid than the ones I make.
 
+### Downloads
+
+[win-options-time.exe](https://github.com/coalpha/win-options-time/releases/download/v1.0.0/win-options-time.exe)
+
+Alternatively, check out the [`v1.0.0` release page](https://github.com/coalpha/win-options-time/releases/tag/v1.0.0).
+
 I haven't made an uninstaller yet because I'm lazy.
 
 ### Rant
