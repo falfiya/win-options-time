@@ -1,28 +1,26 @@
 use super::pause::pause;
 use std::process::exit;
 
-pub fn diep(msg: &str, err: &dyn std::fmt::Debug) -> ! {
-   eprintln!("win-options-time error: {}!\nerr: {:?}", msg, err);
+use super::consts::*;
+
+pub fn c_die(msg: &str, err: &dyn std::fmt::Debug) -> ! {
+   eprintln!("{}{}!\nerr: {:?}{}", ERROR_MSG_HEADER, msg, err, ERROR_MSG_FOOTER);
    pause();
    exit(1);
 }
 
 pub fn die(msg: &str, err: &dyn std::fmt::Debug) -> ! {
-   eprint!("win-options-time error: {}!\nerr: {:?}\nNo changes to your system have been made. Exiting...", msg, err);
+   eprintln!("{}{}!\nerr: {:?}{}\nNo changes to your system have been made.", ERROR_MSG_HEADER, msg, err, ERROR_MSG_FOOTER);
+   pause();
    exit(1);
 }
 
-pub trait DieAble {
-   fn die(&self, why: &str) -> !;
-   fn diep(&self, why: &str) -> !;
+pub trait DieAble<T> {
+   fn die_or(self, what: &str) -> T;
+   fn c_die_or(self, what: &str) -> T;
 }
 
-impl DieAble for std::io::Error {
-   fn die(&self, why: &str) -> ! {
-      die(why, self);
-   }
-
-   fn diep(&self, why: &str) -> ! {
-      diep(why, self);
-   }
+pub trait Dead {
+   fn cannot(&self, what: &str) -> !;
+   fn c_cannot(&self, what: &str) -> !;
 }
